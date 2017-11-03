@@ -1,6 +1,8 @@
+///<reference path="../typings.d.ts" />
 import { Injectable } from '@angular/core';
 
 import { Http, Headers, RequestOptions } from '@angular/http';
+import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
 
 @Injectable()
@@ -10,10 +12,8 @@ export class DataService {
 
   constructor(private _http: Http) { }
 
-  getData = (): any => {
-    return this._http.get('/api/data').map(result =>
-      this.result = result.json()
-    );
+  getData = (): Observable<Array<Organization>> => {
+    return this._http.get('/api/data').map(result => <Array<Organization>>result.json());
   }
 
 }

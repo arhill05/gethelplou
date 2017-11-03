@@ -1,4 +1,5 @@
 const GoogleSpreadsheet = require('google-spreadsheet');
+const Organization = require('../models/organization');
 const doc = new GoogleSpreadsheet('1NW3OZ_kIPQLeqaZtZb5mzJPgIAOsthNzRV1zoVi20Ug');
 
 let data = [];
@@ -21,7 +22,9 @@ getRows = async() => {
       if (err) console.error(err);
       else {
         console.log('Read ' + rows.length + ' rows');
-        data = rows;
+        rows.forEach(function (element) {
+          data.push(new Organization(element))
+        }, this);
       }
     })
 }
@@ -44,5 +47,5 @@ initialize = () => {
 }
 
 module.exports.getData = () => {
-    return data;
+  return data;
 }
