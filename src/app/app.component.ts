@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { DataService } from './data.service';
+import { DataHttpService } from './dataHttp.service';
 
 @Component({
   selector: 'app-root',
@@ -12,8 +12,8 @@ export class AppComponent {
   data: Array<any>;
   title = 'app';
 
-  constructor(private _dataService: DataService) {
-    this._dataService.getData().subscribe((res) => {
+  constructor(private _dataHttpService: DataHttpService) {
+    this._dataHttpService.getData().subscribe((res) => {
       console.log(res);
       this.data = res;
     });
