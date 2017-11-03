@@ -4,8 +4,9 @@
   "license": "MIT",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
+    "watch": "nodemon ./server.js --ignore src/ --ignore dist/",
+    "start": "concurrently \"npm run build\" \"npm run watch\"  --names \"node,ng\" --prefix name",
+    "build": "ng build --watch",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
