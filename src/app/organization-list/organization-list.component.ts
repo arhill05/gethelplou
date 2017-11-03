@@ -10,7 +10,5 @@ export class OrganizationListComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    console.log('hello');
-    console.log(this.organizations);
   }
 }

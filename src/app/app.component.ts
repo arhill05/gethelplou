@@ -16,14 +16,11 @@ export class AppComponent {
   constructor(private _dataHttpService: DataHttpService) {
     this._dataHttpService.getData().subscribe((res) => {
       console.log(res);
-      this.organizations = res;
-      this.organizations.forEach(org => {
-        org.lat = parseInt(<any>org.lat);
-        org.lng = parseInt(<any>org.lng);
+      res.forEach(org => {
+        org.lat = Number(org.lat);
+        org.lng = Number(org.lng);
       });
-      this.firstOrganization = this.organizations[0];
-      console.log('firstOrganization: ', this.firstOrganization);
-      console.log(typeof(this.firstOrganization.lat));
+      this.organizations = res;
     });
   }
 }
