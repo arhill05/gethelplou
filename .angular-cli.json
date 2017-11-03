@@ -22,7 +22,8 @@
     ],
     "stylePreprocessorOptions": {
       "includePaths": [
-        "src/app/scss"
+        "src/app",
+        "src/app/organization-list"
       ]
     },
     "scripts": [],

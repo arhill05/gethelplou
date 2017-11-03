@@ -5,14 +5,14 @@ const doc = new GoogleSpreadsheet('1NW3OZ_kIPQLeqaZtZb5mzJPgIAOsthNzRV1zoVi20Ug'
 let data = [];
 let sheet;
 
-setAuth = async() => {
+setAuth = () => {
   const creds = require('../../gethelplou-b9e0d09bac89.json');
-  await doc.useServiceAccountAuth(creds, () => {
+  doc.useServiceAccountAuth(creds, () => {
     return null;
   });
 }
 
-getRows = async() => {
+getRows = () => {
   sheet.getRows({
       offset: 1,
       limit: 20,
@@ -29,8 +29,8 @@ getRows = async() => {
     })
 }
 
-getInfoAndWorksheets = async() => {
-  await doc.getInfo((err, info) => {
+getInfoAndWorksheets = () => {
+  doc.getInfo((err, info) => {
     if (err) console.error(err);
     else {
       console.log('Loaded doc: ' + info.title + ' by ' + info.author.email);

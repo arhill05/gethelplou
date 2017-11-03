@@ -1,0 +1,19 @@
+<div class="organization-list">
+  <div class="list-item" *ngFor='let organization of organizations'>
+    <a class="website" href="{{organization.webUrl}}">Website</a>
+    <h2>{{organization.organizationName}}</h2>
+    <div class="form-group">
+      <label>Address</label>
+      <div class="address">
+        <p>{{organization.address}}</p>
+        <p>{{organization.city}}, {{organization.state}} {{organization.zipCode}}</p>
+      </div>
+    </div>
+    <div class="form-group">
+      <label>Phone Number</label>
+      <p>
+        <a href="tel:{{organization.phoneNumber}}">{{organization.phoneNumber}}</a>
+      </p>
+    </div>
+  </div>
+</div>

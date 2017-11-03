@@ -1,1 +1,48 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+$light-gray: rgba(0,0,0,0.2);
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.card {
+    margin: 8px;
+    padding: 16px;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
+    border: 1px solid rgba(0,0,0,0.2);
+    h2 {
+        margin: 8px 0 16px 0;
+    }
+}
+
+.list-item {
+    margin: 0;
+    padding: 16px;
+    border: 1px solid $light-gray;
+    border-top: none;
+    transition: 0.2s ease;
+    &:last-child {
+        border-bottom: none;
+    }
+
+    &:hover, &:last-child:hover {
+        box-shadow: 0 0 2px 1px rgba(0,0,0,0.2);
+        border: 1px solid darkgray;
+        transition: 0.2s ease;
+    }
+
+    h2 {
+        margin: 8px 0 16px 0;
+    }
+}
+
+.form-group {
+    label {
+        font-weight: bold;
+        display: block;
+    }
+
+}

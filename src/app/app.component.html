@@ -1,6 +1,8 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<h1>The app is working!</h1>
-<ul>
-  <li *ngFor="let entry of data">{{ entry.organizationName }} : {{ entry.address }}</li>
-</ul>
-
+<div class="content">
+  <app-organization-list [organizations]='organizations'></app-organization-list>
+  <agm-map *ngIf="firstOrganization.lat" [latitude]="38.328732" [longitude]="-85.764771" [zoom]="8">
+    <agm-marker [latitude]="firstOrganization.lat" [longitude]="firstOrganization.lng"></agm-marker>
+      <!-- <agm-marker *ngFor="let organization of organizations" [label]="test" [latitude]="organization.lat" [longitude]="organization.lng"></agm-marker> -->
+  </agm-map>
+</div>

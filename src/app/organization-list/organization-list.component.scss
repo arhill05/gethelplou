@@ -1,0 +1,15 @@
+.organization-list {
+    display: flex;
+    flex-direction: column;
+
+    .list-item {
+        .website {
+            float: right;
+            margin-top: 16px;
+        }
+
+        .address {
+            line-height: 0.6;
+        }
+    }
+}
