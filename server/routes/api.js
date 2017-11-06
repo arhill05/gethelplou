@@ -12,10 +12,7 @@ let response = {
   message: null
 };
 
-router.get('/data', (req, res) => {
-  let data = dataController.getData();
-  res.json(data);
-})
+router.get('/data', dataController.getData);
 
 initialize();
 
