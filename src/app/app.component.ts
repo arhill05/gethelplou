@@ -18,13 +18,15 @@ export class AppComponent {
   };
 
   constructor(private _dataHttpService: DataHttpService) {
-    this._dataHttpService.getData().subscribe((res) => {
+    this._dataHttpService.getData().subscribe(res => {
       console.log(res);
-      res.forEach(org => {
-        org.lat = Number(org.lat);
-        org.lng = Number(org.lng);
-      });
-      this.organizations = res;
+      if (res.length) {
+        res.forEach(org => {
+          org.lat = Number(org.lat);
+          org.lng = Number(org.lng);
+        });
+        this.organizations = res;
+      }
     });
   }
 }
