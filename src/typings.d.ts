@@ -32,5 +32,12 @@ interface Organization {
   MedicalDetoxOffered: boolean;
   AssessmentOffered: boolean;
   AdditionalNotes: string;
+  MondayHours: string;
+  TuesdayHours: string;
+  WednesdayHours: string;
+  ThursdayHours: string;
+  FridayHours: string;
+  SaturdayHours: string;
+  SundayHours: string;
 }
 
