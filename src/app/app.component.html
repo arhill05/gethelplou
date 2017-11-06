@@ -1,7 +1,7 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div class="content">
   <app-organization-list [organizations]='organizations'></app-organization-list>
-  <agm-map *ngIf="organizations" [latitude]="38.328732" [longitude]="-85.764771" [zoom]="8">
+  <agm-map *ngIf="organizations" [latitude]="startingCoords.lat" [longitude]="startingCoords.lng" [zoom]="12">
       <agm-marker *ngFor="let organization of organizations" [latitude]="organization.lat" [longitude]="organization.lng"></agm-marker>
   </agm-map>
 </div>

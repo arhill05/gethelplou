@@ -12,6 +12,10 @@ export class AppComponent {
   organizations: Array<Organization>;
   firstOrganization;
   title = 'app';
+  startingCoords = {
+    lat: 38.228732,
+    lng: -85.714771
+  };
 
   constructor(private _dataHttpService: DataHttpService) {
     this._dataHttpService.getData().subscribe((res) => {

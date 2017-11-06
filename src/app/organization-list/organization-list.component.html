@@ -15,5 +15,17 @@
         <a href="tel:{{organization.phoneNumber}}">{{organization.phoneNumber}}</a>
       </p>
     </div>
+    <div class="form-group">
+        <label>Hours</label>
+        <ul>
+          <li>Monday: {{organization.mondayHours || 'Not listed'}}</li>
+          <li>Tuesday: {{organization.tuesdayHours || 'Not listed'}}</li>
+          <li>Wednesday: {{organization.wednesdayHours || 'Not listed'}}</li>
+          <li>Thursday: {{organization.thursdayHours || 'Not listed'}}</li>
+          <li>Friday: {{organization.fridayHours || 'Not listed'}}</li>
+          <li>Saturday: {{organization.saturdayHours || 'Not listed'}}</li>
+          <li>Sunday: {{organization.sundayHours || 'Not listed'}}</li>
+        </ul>
+      </div>
   </div>
 </div>
