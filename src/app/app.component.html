@@ -1,12 +1,2 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div class="content">
-  <app-organization-list [organizations]='organizations'></app-organization-list>
-  <agm-map *ngIf="organizations" [latitude]="startingCoords.lat" [longitude]="startingCoords.lng" [zoom]="12">
-    <agm-marker *ngFor="let organization of organizations" [title]="organization.name" [latitude]="organization.lat" [longitude]="organization.lng">
-      <agm-info-window>
-        <strong>{{organization.organizationName}}</strong>
-        <p>{{organization.address}}, {{organization.city}}, {{organization.state}} {{organization.zipCode}}</p>
-      </agm-info-window>
-    </agm-marker>
-  </agm-map>
-</div>
+<router-outlet>
+</router-outlet>
