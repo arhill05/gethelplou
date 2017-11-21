@@ -1,0 +1,22 @@
+$red: #AD0000;
+$dark-red: darken($red, 8%);
+$darker-red: darken($red, 16%);
+$darkest-red: darken($red, 24%);
+
+$white: #fdfdfd;
+
+$light-gray: rgba(0,0,0,0.2);
+$gray: #CCC;
+$dark-gray: darken($gray, 8%);
+$darker-gray: darken($gray, 16%);
+$darkest-gray: darken($gray, 24%);
+
+$yellow: #FDB913;
+$dark-yellow: darken($yellow, 8%);
+$darker-yellow: darken($yellow, 16%);
+$darkest-yellow: darken($yellow, 24%);
+
+$single-space: 8px;
+$double-space: $single-space * 2;
+$triple-space: $single-space * 3;
+$quad-space: $single-space * 4;

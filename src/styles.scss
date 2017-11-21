@@ -1,16 +1,53 @@
 /* You can add global styles to this file, and also import other style files */
-@import url('https://fonts.googleapis.com/css?family=Roboto');
-
-$light-gray: rgba(0,0,0,0.2);
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
+@import 'variables';
 
 body {
+    background-color: $gray;
+    font-family: 'Open Sans', sans-serif;
+    height: 100%;
     margin: 0;
-    font-family: 'Roboto', sans-serif;
+}
+
+h1, h2, h3 {
+    font-family: 'Roboto Slab'
+}
+
+h1 {
+    font-size: 1.6rem;
+}
+
+h2 {
+    font-size: 1.4rem;
+}
+
+h3 {
+    font-size: 1.2rem;
+}
+
+button.button-primary {
+    background-color: $red;
+    border: none;
+    border-radius: 4px;
+    color: $white;
+    cursor: hover;
+    font-weight: 700;
+    padding: $single-space;
+}
+
+button.button-primary:hover {
+    background-color: $dark-red;
+}
+
+button.button-primary:active {
+    background-color: $darker-red;
 }
 
 .card {
-    margin: 8px;
-    padding: 16px;
+    background-color: $white;
+    margin: $single-space;
+    padding: $double-space;
     box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
     border: 1px solid rgba(0,0,0,0.2);
     h2 {
@@ -20,7 +57,7 @@ body {
 
 .list-item {
     margin: 0;
-    padding: 16px;
+    padding: $double-space;
     border: 1px solid $light-gray;
     border-top: none;
     transition: 0.2s ease;
