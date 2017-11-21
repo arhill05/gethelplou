@@ -1,0 +1,11 @@
+@import '../../variables';
+
+#home {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding: $quad-space;
+    .card {
+        width: 50%;
+    }
+}
