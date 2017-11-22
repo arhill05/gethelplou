@@ -13,3 +13,9 @@ agm-map {
     flex-grow: 5;
     height: 100%;
 }
+
+@media screen and (max-width: 696px) {
+    agm-map {
+        display: none;
+    }
+}
