@@ -9,3 +9,9 @@
         width: 50%;
     }
 }
+
+@media screen and (max-width: 696px) {
+    #home .card {
+        width: 100%
+    }
+}

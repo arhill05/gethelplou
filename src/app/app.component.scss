@@ -1,5 +1,6 @@
 @import '../variables';
 $header-height: $single-space * 6;
+
 header {
   align-items: center;
   background-color: $red;
@@ -39,4 +40,11 @@ header {
   right: 0;
   top: $header-height + 4px;
   z-index: 1000;
+  overflow: scroll;
+}
+
+@media screen and (max-width: 696px) {
+  header a, header a:hover {
+    margin: 0 $single-space;
+  }
 }
