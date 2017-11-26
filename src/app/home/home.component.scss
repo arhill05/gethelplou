@@ -3,15 +3,46 @@
 #home {
     align-items: center;
     display: flex;
+    flex: 1;
     flex-direction: column;
     padding: $quad-space;
     .card {
-        width: 50%;
+        padding: $quad-space;
+    }
+    h3 {
+        margin-top: $single-space * 6;
+    }
+}
+
+.search {
+    align-items: center;
+    background-color: $darker-gray;
+    box-shadow: 0 4px 4px 0 $darkest-gray;
+    display: flex;
+    flex-direction: column;
+    margin: $single-space * 6 auto;
+    padding: $single-space;
+    text-align: center;
+    width: 50%;
+    .button-primary {
+        margin: $single-space 0;
+        min-width: fit-content;
+        width: 30%;
     }
 }
 
 @media screen and (max-width: 696px) {
+    #home {
+        padding: 0;
+    }
     #home .card {
-        width: 100%
+        padding: $single-space;
+    }
+
+    .search {
+        width: 90%;
+        .button-primary {
+                width: 80%;
+        }
     }
 }

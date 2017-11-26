@@ -1,8 +1,11 @@
+@import '../../variables';
+
 .organization-list {
     display: flex;
     flex-direction: column;
 
     .list-item {
+        background-color: $white;
         .website {
             float: right;
             margin-top: 16px;
