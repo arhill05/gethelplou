@@ -10,6 +10,18 @@
     }
 }
 
+.search {
+    align-items: center;
+    background-color: $darker-gray;
+    display: flex;
+    flex-direction: column;
+    padding: $single-space;
+    .button-primary {
+        margin: $single-space 0;
+        width: 30%;
+    }
+}
+
 @media screen and (max-width: 696px) {
     #home .card {
         width: 100%

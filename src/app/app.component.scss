@@ -40,7 +40,7 @@ header {
   right: 0;
   top: $header-height + 4px;
   z-index: 1000;
-  overflow: scroll;
+  overflow-y: auto;
 }
 
 @media screen and (max-width: 696px) {

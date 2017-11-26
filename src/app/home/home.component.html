@@ -6,15 +6,19 @@
       <a href="http://gethelplex.org">Get Help Lex</a>.
     </p>
     <div class="search">
-        What kind of facilities are you interested in?
+      <h2>What kind of facilities are you interested in?</h2>
+      <button (click)="onSearchClick('assessmentOffered')" class="button-primary">Assessments</button>
+      <button (click)="onSearchClick('medicalDetoxOffered')" class="button-primary">Medical Detox</button>
+      <button (click)="onSearchClick('residentialOffered')" class="button-primary">Residental</button>
+      <button (click)="onSearchClick('outpatientOffered')" class="button-primary">Outpatient</button>
     </div>
     <h3>What this is</h3>
-    <p>This is a tool for anyone who is seeking facilities and centers that assist with addiction
-        and substance abuse.
+    <p>This is a tool for anyone who is seeking facilities and centers that assist with addiction and substance abuse.
     </p>
     <h3>What this isn't</h3>
-    <p>This tool is not a diagnosis tool, an assessment tool, or a substitute for any kind of treatment. <strong>If you or someone else is experiencing a medical emergency,
-        please call <a href="tel:911">911</a> immediately</strong>.
+    <p>This tool is not a diagnosis tool, an assessment tool, or a substitute for any kind of treatment.
+      <strong>If you or someone else is experiencing a medical emergency, please call
+        <a href="tel:911">911</a> immediately</strong>.
     </p>
   </div>
 </section>

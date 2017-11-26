@@ -31,7 +31,7 @@ const appRoutes: Routes = [
     BrowserModule,
     HttpModule,
     AgmCoreModule.forRoot({ apiKey: 'AIzaSyBkDKws3bhe_5Fnp_D9G4C6e_sWYEqkKbE' }),
-    RouterModule.forRoot(appRoutes, { enableTracing: true })
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [DataHttpService],
   bootstrap: [AppComponent]
