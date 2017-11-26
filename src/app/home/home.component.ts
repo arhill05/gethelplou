@@ -15,7 +15,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {}
 
-  onSearchClick = (term : SearchTerm) => {
+  onSearchClick = (term : string) => {
     const searchTerms = [term]
     this
       .router
