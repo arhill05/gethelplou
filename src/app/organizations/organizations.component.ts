@@ -40,7 +40,11 @@ export class OrganizationsComponent implements OnInit {
 
   filterBySearchTerm = (organizations: Organization[]): Organization[] => {
     let result: Organization[] = [];
+
+    //
     if(!this.searchTerms || !this.searchTerms.length) return organizations;
+
+    // only return the organizations that the search terms indicate
     this.searchTerms.forEach(term => {
       organizations.forEach(organization => {
         if(organization[term] && !(result.indexOf(organization) > -1))
